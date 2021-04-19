@@ -14,3 +14,251 @@ export const _swap = css`
   padding: 108px 24px 24px 24px;
   transition: background 250ms ease-out;
 `;
+
+export const swap_card = css`
+  width: 100%;
+  max-width: 420px;
+  min-height: 480px;
+  height: calc(100% - 104px);
+  max-height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid ${({ theme }) => theme.ribbon.background['primary']};
+  border-radius: ${({ theme }) => theme.border_radius['roundest']};
+  background: ${({ theme }) => theme.ribbon.background['primary']};
+`;
+
+export const swap_view = css`
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: ${({ theme }) => theme.border_radius['roundest']};
+  background: ${({ theme }) => theme.background['lowest']};
+  box-shadow: 8px 8px 32px 4px rgba(0, 0, 0, 0.16),
+    0 0 0 2px rgba(231, 201, 157, 1);
+`;
+
+export const swap_layers = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.container};
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: ${({ theme }) => theme.border_radius['roundest_inside']};
+`;
+
+export const swap_layer = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.container};
+  min-width: 100%;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const swap_wrapper = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.container};
+  width: 100%;
+  max-width: 420px;
+  min-height: 540px;
+
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transform: ${({ $end }) => ($end ? 'translateY(100%)' : 'translateY(0%)')};
+`;
+
+export const swap_container = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.container};
+  min-width: 100%;
+  width: 100%;
+  height: ${({ $height }) => $height || 0}px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 36px;
+  padding-bottom: 12px;
+  border-radius: ${({ theme }) => theme.border_radius['roundest_inside']};
+  background: ${({ theme }) => theme.background['lower']};
+  box-shadow: 1px 1px 12px 2px rgba(0, 0, 0, 0.16),
+    inset 0 0 16px 0 rgba(255, 255, 255, 0.12);
+`;
+
+export const swap_center = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.center};
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const swap_top = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.top};
+  min-width: 100%;
+  width: 100%;
+  min-height: 54px;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+export const swap_bottom = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.bottom};
+  min-width: 100%;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+export const swap_form = css`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.swap.form};
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 72px;
+`;
+
+export const swap_basket = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  > svg {
+    fill: ${({ theme }) => theme.text['faded']};
+    min-width: 36px;
+    width: 36px;
+    min-height: 36px;
+    height: 36px;
+  }
+`;
+
+export const swap_coin = css`
+  min-width: 28px;
+  width: 28px;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: ${({ $right }) => ($right ? '0 0 0 8px' : '0 8px 0 0')};
+  > div {
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background: ${({ theme }) => theme.background['higher']};
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.08);
+  }
+  > span {
+    font-size: 11px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.text['faded']};
+    margin-top: 2px;
+  }
+`;
+
+export const swap_chevron = css`
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: ${({ $right }) => ($right ? '0 0 0 12px' : '0 12px 0 0')};
+  > svg {
+    min-width: 16px;
+    width: 16px;
+    min-height: 16px;
+    height: 16px;
+    fill: ${({ theme }) => theme.text['faded']};
+    transform: ${({ $right }) => ($right ? 'scaleX(-1)' : 'scaleX(1)')};
+    opacity: 0.66;
+  }
+`;
+
+export const swap_float = css`
+  min-width: 100%;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+`;
+
+export const swap_actions = css`
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 12px;
+  bottom: 28px;
+`;
+
+export const swap_icon = css`
+  min-width: 32px;
+  width: 32px;
+  min-height: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 8px;
+  margin-left: 8px;
+  cursor: pointer;
+  &:hover {
+    > svg {
+      transform: scale(1.16);
+      fill: ${({ theme }) => theme.text['shadow']};
+    }
+  }
+  > svg {
+    min-width: ${({ $small }) => ($small ? '20px' : '26px')};
+    width: ${({ $small }) => ($small ? '20px' : '26px')};
+    min-height: ${({ $small }) => ($small ? '20px' : '26px')};
+    height: ${({ $small }) => ($small ? '20px' : '26px')};
+    fill: ${({ theme }) => theme.text['faded']};
+    stroke: ${({ theme }) => theme.text['faded']};
+    transition: transform ease-out 100ms;
+  }
+`;
